@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Nhom24.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Nhom24Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Nhom24Context") ?? throw new InvalidOperationException("Connection string 'Nhom24Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

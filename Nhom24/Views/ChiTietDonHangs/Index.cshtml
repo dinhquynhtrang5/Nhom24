@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Nhom24.Models.ChiTietDonHang>
+
+@{
+    ViewData["Title"] = "CHI TIẾT ĐƠN HÀNG";
+}
+
+<h1>CHI TIẾT ĐƠN HÀNG</h1>
+
+<p>
+    <a class="btn btn-warning" asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered table-danger">
+    <thead>
+        <tr class="table-success text-center">
+            <th>
+                ID Đơn Hàng
+            </th>
+            <th>
+                ID Sản Phẩm
+            </th>
+            <th>
+                Số Lượng Sản Phẩm
+            </th>
+            <th>
+                Tuỳ Chọn
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="align-middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.DonHang.DonHangID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SanPham.SanPhamID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongSanPham)
+            </td>
+            <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@item.DonHangID" class="btn btn-info">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.DonHangID" class="btn btn-warning">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.DonHangID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

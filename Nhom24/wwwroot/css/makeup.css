@@ -1,0 +1,290 @@
+#main_menu 
+{   
+	height:50px;
+    background: #3CB371;
+	font-size:15px;
+    padding:17px 0px;
+}
+
+#main_menu li{	
+	list-style:none;
+	float :left;
+		
+}
+#main_menu li a{	
+	text-decoration:none;
+	color:#000;
+    margin: 0px 61px;
+  	font-weight:bold;
+	color:white; 
+		
+}
+
+
+#main_menu li a:hover {
+
+    transition:  0.1s;
+	text-shadow:7px 7px 10px black;
+	
+}
+.btn{
+    background:#003399;
+	color:white; 
+	margin-bottom:6px;
+	height:37px;
+	
+}
+
+
+#login {
+	margin:32px;
+	width:58%; 
+	background:#003399;
+	border-radius:15px; 
+	padding :7px;	
+}
+#login i {
+	font-size:23px;
+	float:left;
+	margin-right:10px;	
+	color: white;
+	
+}
+#login li {
+	font-size:15px;
+	font-family:Oswalt;	
+	list-style: none;
+	cursor:pointer;
+}
+#login li a{
+	text-decoration:none;
+	color:white; 
+}
+#login:hover {
+	
+    transition:  0.3s;
+	background-color:#3CB371;
+	
+}
+.shop{
+	margin-top:32px;
+	color:white; 
+	width:100%; 
+	background:#003399;
+	border-radius:15px; 
+	padding :7px;	
+}
+.shop i{
+    font-size:20px;
+	float:left;
+	margin-right:10px;
+	color:white;
+}
+.shop li{
+	font-size:15px;
+	font-family:Oswalt;	
+	list-style: none;
+	cursor:pointer;
+}
+.shop li a {
+	
+	text-decoration:none;
+	color:white; 
+}
+.shop:hover {
+	
+    transition:  0.3s;
+	background-color:#3CB371;
+	
+}
+footer .row {
+	display:flex;
+	flex-wrap:wrap;
+	margin-top:40px; 
+	padding:30px 0px; 
+	
+}
+.footer ul{
+	list-style: none;
+}
+.footer {
+	background-color:#d6d1d1;
+	margin-top: 50px;
+	
+	
+}
+.footer col {
+	width:25%;
+	padding: 0 15px;	
+}
+.footer h4{
+	color:black;
+	font-size:18px;
+    text-transform:capitazile;
+	margin-bottom:30px;
+	position:relative;
+	margin-left:50px;
+	
+	
+}
+.footer ul li a{
+	font-size:15px;
+	text-transform: capitalize;
+	color:black;
+	text-decoration:none;
+	display:block;
+	transition: all 0.3s ease;
+	margin-left:20px;	
+}
+.footer ul li a:hover{
+	color:blue;
+    padding-left: 8px;	
+
+}
+.links a {
+	display:inline-block;
+	height:40px;
+	width:40px;
+	background-color:grey;
+	margin: 0 10px 10px 0 ;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	color:#ffffff;
+	transition: all 0.5s ease;
+	margin-left:34px;
+	
+}
+.links a:hover {
+     color:#24262b;
+	 background-color:#56aaff;
+
+}
+/*-------home--------*/
+.category-top p{
+	font-family:Oswald;
+	margin: 0 12px;
+	font-size:12px;
+	
+}
+.category-left {
+	
+	width:20%;
+	padding: 50px 0 0;
+	margin-left:-50px;
+	
+	
+}
+.category-right {
+	width:80%;
+	padding: 50px 0 0 ;
+	margin : 0 auto;
+}
+.category-right-top-item p{
+	font-size:18px;
+	font-weight:bold;
+	color: #00007f;
+    text-align: center;
+
+}
+.sale
+{
+	background:#3CB371;
+	border-radius:20px;
+	padding:5px;
+	font-size:16px;
+	width:60%;
+	margin-left: 50px;
+	
+	
+}	
+	
+.sale:hover{
+	color:white;
+	background-color:#1769aa;
+	
+	
+}
+.category-right select {
+	position:absolute;
+	right:100px;
+	top:220px;
+	width:20%;
+	cursor:pointer;
+	height: 40px;
+	text-align:center;
+}
+.category-right-content{
+	display:flex;
+	justify-content: space-between;
+	background: #E6E6FA;
+	margin: 30px -80px 20px -30px;
+		
+}
+.category-right-content-item{
+	width: calc(25% - 12px);
+	text-align:center;
+	padding: 12px 0;
+		
+}
+.category-right-content-item a {
+	text-decoration:none;
+}
+.category-right-content-item h1{
+	font-size:20px;
+    margin-top:6px;	
+	color: black;
+}
+.category-right-content-item p{
+	font-size:15px;
+	    
+}
+
+.category-right-content-item img{
+	width:200px;
+	height:260px;
+	margin: 0px 10px;
+   transition:1s;
+}
+.category-right-content-item img:hover{
+	 transform:scale(1.1);
+     z-index:2;
+} 
+
+.category-right-bottom {
+	justify-content: space-between;
+	margin: 30px 0 20px;
+	width:100%;
+	text-align:center;
+	font-size:14px;
+	font-family:Bebas Neue;
+	
+}
+
+.category-left ul li {
+	padding:6px;
+	list-style: none;
+	margin-left:-10px;
+	
+	
+	
+}
+.category-left ul li>a{
+	
+	font-size:18px;
+	font-weight:bold;
+
+	text-decoration:none;
+	color:#3CB371 ;
+	transition: all 0.3s ease;
+	
+}
+.category-left ul li a:hover{
+	
+	color:black;
+    padding-left: 10px;	
+    
+	
+}
+
+

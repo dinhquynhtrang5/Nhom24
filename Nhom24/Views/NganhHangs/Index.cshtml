@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Nhom24.Models.NganhHang>
+
+@{
+    ViewData["Title"] = "NGÀNH HÀNG";
+}
+
+<h1>QUẢN LÝ NGÀNH HÀNG</h1>
+
+<p>
+    <a class="btn btn-warning" asp-action="Create">Create New</a>
+    <a class="btn btn-success" asp-action="Upload">Upload Excel</a>
+</p>
+<table class="table table-bordered table-danger">
+    <thead>
+        <tr class="table-success text-center">
+            <th>
+                ID Nghành Hàng
+            </th>
+            <th>
+                Tên Nghành Hàng
+            </th>
+            <th>
+                ID Danh Mục Sản Phẩm
+            </th>
+            <th>
+                Tuỳ Chọn
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="align-middle">
+            <td>
+                    @Html.DisplayFor(modelItem => item.NganhHangID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NganhHangName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DanhMucSanPham.DanhMucSanPhamID)
+            </td>
+            <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@item.NganhHangID" class="btn btn-info">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.NganhHangID" class="btn btn-warning">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.NganhHangID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

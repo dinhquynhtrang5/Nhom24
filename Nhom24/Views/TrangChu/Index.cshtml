@@ -1,0 +1,285 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style_2.css"/>
+		<title>Mỹ phẩm Oganic</title>
+			 <link rel="icon" href="images/logo_mp.png"/>
+	</head>
+	<body>
+			<div class="fluid-container" style="background:#E6E6FA">
+				   <div class="container">
+				<div class="row" style="padding-bottom:20px;">
+					<div class="col-2" >
+						<img src="images/logo_mp.png" style="width:100%;margin:20px -50px;"/>
+					</div>
+					
+					<div class="col-7">
+						<form action="index_2.html" method="post" style="margin:32px -20px;">
+							<input class="form-control" style="width:80%;display:inline;,<li><input type="text" name="search" placeholder="Tìm sản phẩm hay thương hiệu mong muốn ..."</li>
+							
+							<a class="btn" href="index_2.html"><i class="fa fa-search"></i>Tìm kiếm </a>
+						</form>
+					</div>
+					<div class="col-2">
+					 <div id="login">
+							<i class="fa fa-user-circle"></i>
+							<li><a href="form_login.html">LOGIN</a><li>
+					</div>
+					</div>
+					<div class="col-1">
+					 <div class="shop">
+							<i  class="fa fa-cart-plus"></i>
+							<li><a href="">GIỎ</a></li>
+								
+								
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		   </div>
+	         <div class="fluid-container" >
+			
+				<div id="main_menu">
+				   
+					<li><a href="@Url.Action("Index", "TrangChu")">TRANG CHỦ </a></li>     
+					<li><a href="">DƯỠNG DA</a></li>
+					<li><a href="@Url.Action("Makeup", "TrangChu")">MAKEUP </a></li>
+					<li><a href="">THỰC PHẨM CHỨC NĂNG</a><li>
+					<li><a href="">BODY</a></li>
+					<li><a href="about_us.html">GIỚI THIỆU</a></li>
+				   	
+			     </div>
+				</div>  
+		       <div class="fluid-container">
+			      <div class="container" >
+			        <div class="row" style="padding:20px 0px;">
+					<div class="col-8" style= " padding-left:0 ;">
+						<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+						  <div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							
+						  </div>
+						  <div class="carousel-inner slide_1">
+							<div class="carousel-item active">
+							  <img src="images/s_1.png" class="d-block-1 w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+							  <img src="images/s_2.png" class="d-block-1 w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+							  <img src="images/s_3.png" class="d-block-1 w-100" alt="...">
+							</div>
+							
+						  </div>
+						  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						  </button>
+						  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						  </button>
+						</div>
+					</div>
+					<div class="col-4">
+						<img src="images/s_4.png" style="width:103%;height:600px" alt="ảnh slide"/>
+					</div>
+				</div>
+			    <div class="row" style=" padding:20px 0px">
+				<div class="fluid-container" style="background:#E6E6FA" >
+					<a style="font-size:30px;float:left;padding:20px;font-family:Karantina;">|SẢN PHẨM MỚI</a>
+															
+					<div class="col-12">
+						<div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+						  <div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							
+						  </div>
+						  <div class="carousel-inner slide_hot" style="height:430px;">
+							<div class="carousel-item active">
+								<div class="row" >
+									@for (int i = 0; i < 6; i++) {
+										<div class="col-2">
+											<a href="@Url.Action("Details", "TrangChu",new {id = @ViewBag.Message[i].SanPhamID})">
+												<img  src="images/@ViewBag.Message[i].AnhSanPham" class="d-block w-100" alt="...">
+												<P>@ViewBag.Message[i].SanPhamName</p>
+												<p>@ViewBag.Message[i].GiaSanPham.ToString("#,###", System.Globalization.CultureInfo.GetCultureInfo("vi-VN").NumberFormat) đ<p>
+												<p class="sale">MUA HÀNG</p>
+											
+											</a>
+										</div>
+									}
+							  </div>
+							  </div>
+
+							<div class="carousel-item">
+								<div class="row">
+									@for (int i = 6; i < 12; i++) {
+										<div class="col-2">
+											<a href="@Url.Action("Details", "TrangChu",new {id = @ViewBag.Message[i].SanPhamID})">
+												<img src="images/@ViewBag.Message[i].AnhSanPham" class="d-block w-100" alt="...">
+												<P>@ViewBag.Message[i].SanPhamName</p>
+												<p>@ViewBag.Message[i].GiaSanPham.ToString("#,###", System.Globalization.CultureInfo.GetCultureInfo("vi-VN").NumberFormat) đ<p>
+												<p class="sale">MUA HÀNG</p>
+											</a>
+										</div>
+									}
+							
+								</div>
+							</div>
+						  </div>
+						  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						  </button>
+						  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						  </button>
+						   </div>
+					   </div>
+				   </div>
+			    </div>
+               <div class="row" style="padding:20px 0px; " >
+               
+				<div class="fluid-container" style="background:#E6E6FA">
+					<a style="font-size:30px;float:left;padding:20px;font-family:Karantina;">|SẢN PHẨM BÁN CHẠY</a>
+															
+					<div class="col-12">
+						<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+						  <div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							
+						  </div>
+						  <div class="carousel-inner slide_hot" style="height:430px;">
+							<div class="carousel-item active">
+								<div class="row">
+									@for (int i = 6; i < 12; i++) {
+										<div class="col-2">
+											<a href="@Url.Action("Details", "TrangChu",new {id = @ViewBag.Message[i].SanPhamID})">
+												<img src="images/@ViewBag.Message[i].AnhSanPham" class="d-block w-100" alt="...">
+												<P>@ViewBag.Message[i].SanPhamName</p>
+												<p>@ViewBag.Message[i].GiaSanPham.ToString("#,###", System.Globalization.CultureInfo.GetCultureInfo("vi-VN").NumberFormat) đ<p>
+												<p class="sale">MUA HÀNG</p>
+											</a>
+										</div>
+									}
+								</div>
+							</div>	
+							
+							<div class="carousel-item">
+								<div class="row">
+									@for (int i = 0; i < 6; i++) {
+										<div class="col-2">
+											<a href="@Url.Action("Details", "TrangChu",new {id = @ViewBag.Message[i].SanPhamID})">
+												<img src="images/@ViewBag.Message[i].AnhSanPham" class="d-block w-100" alt="...">
+												<P>@ViewBag.Message[i].SanPhamName</p>
+												<p>@ViewBag.Message[i].GiaSanPham.ToString("#,###", System.Globalization.CultureInfo.GetCultureInfo("vi-VN").NumberFormat) đ<p>
+												<p class="sale">MUA HÀNG</p>
+											</a>
+										</div>
+									}
+								</div>
+							</div>
+						  </div>
+						  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						  </button>
+						  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						  </button>
+						   </div>
+					   </div>
+				   </div>
+				   </div>
+				   </div>
+				</div>
+				
+				<div class="fluid-container" style="margin: 20px 0px;">
+		           <div class="container"style="max-width:100%; height:450px; background-image: url(https://www.mindfulmamma.co.uk/wp-content/uploads/2017/10/tumblr_nlzd6fZpME1tx4fsyo7_1280.png);background-size:cover;">
+			        <div id="tips">
+				     <div class="row">
+				    <p> | VIDEO HỮU ÍCH |</p> 
+				   <div class="col-4">
+				     <div>
+				   <iframe style="width:100%" width="500" height="250" src="https://www.youtube.com/embed/DAu_jF-9AXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				     <p>[GLOWY CORAL] XU HƯỚNG MAKEUP-WARM MAKEUP </p>
+				     </div>
+				    </div> 
+				  <div class= "col-4">
+				   <div>
+				    <iframe style="width:100%" width="560" height="250" src="https://www.youtube.com/embed/K5l6OfrIvpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    <p>HƯỚNG DẪN 4 BƯỚC TẨY TRANG CHUẨN CHO MỌI LOẠI DA</p>
+			      	</div>
+				  </div>
+				  <div class="col-4">
+				   <div>
+				   <iframe style="width:100%" width="560" height="250" src="https://www.youtube.com/embed/B-KyxxG9NkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    <p> SKINCARE - 6 SAI LẦM KHI RỬA MẶT KHIẾN DA BẠN TỆ HƠN</p>
+				    </div>
+				</div>
+				
+				  </div>
+				 </div>
+				 </div>
+			    </div>
+			    <footer class="footer">
+				<div class="fluid-container " >
+				   <div class="container">
+							 <div class="row">
+							  <div class="col-3">
+							   <img src="images/logo_mp.png" style="width:50%; margin:-10px 0 10px 0;"/>
+							   <p>Địa chỉ : 138/28A Trần Hưng Đạo, An Phú, Ninh Kiều, Cần Thơ 920000, Việt Nam</p>
+							   
+							   <p>Email: myphamOganic@gmail.com</P>
+							   
+								<p>Liên hệ: 0986.989.626</p>
+								 
+							   </div>
+							   <div class="col-3">
+							   <h4>TRANG CHỦ</h4>
+							   <ul>
+								  <li><a href="#">Liên hệ</a></li>
+								  <li><a href="#">Về chúng tôi</a></li>
+								  <li><a href="#">Thông báo</a></li>
+							   </ul>
+							   </div>
+							   <div class="col-3">
+							   <h4>HỖ TRỢ</h4>
+							   <ul>
+								  <li><a href="#">Câu hỏi</a></li>
+								  <li><a href="#">Phương thức thanh toán</a></li>
+								  <li><a href="#">Hướng dẫn đặt hàng</a></li>
+							   </ul>
+							   </div>
+							   <div class="col-3">
+							   <h4>THEO DÕI CHÚNG TÔI</h4>
+							   <div class="links">
+								  <a href="#"><i class="fa fa-facebook-f"></i></a>
+								  <a href="#"><i class="fa fa-twitter"></i></a>
+								  <a href="#"><i class="fa fa-instagram"></i></a>
+								  </div>
+							   
+								 </div>
+			                  <div>	
+			            </div>
+		             </div>
+		       </div>
+		  </footer>
+		</div>	 	
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>			
+	</body> 
+</html>

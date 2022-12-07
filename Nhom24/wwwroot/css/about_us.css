@@ -1,0 +1,185 @@
+#main_menu 
+{   
+	height:50px;
+    background: #3CB371;
+	font-size:15px;
+    padding:17px 0px;
+}
+
+#main_menu li{	
+	list-style:none;
+	float :left;
+		
+}
+#main_menu li a{	
+	text-decoration:none;
+	color:#000;
+    margin: 0px 61px;
+  	font-weight:bold;
+	color:white; 
+		
+}
+
+
+#main_menu li a:hover {
+
+    transition:  0.1s;
+	text-shadow:7px 7px 10px black;
+	
+}
+.btn{
+    background:#003399;
+	color:white; 
+	margin-bottom:6px;
+	height:37px;
+   
+}
+
+
+#login {
+	margin:32px;
+	width:58%; 
+	background:#003399;
+	border-radius:15px; 
+	padding :7px;	
+}
+#login i {
+	font-size:23px;
+	float:left;
+	margin-right:10px;	
+	color: white;
+	
+}
+#login li {
+	font-size:15px;
+	font-family:Oswalt;	
+	list-style: none;
+	cursor:pointer;
+}
+#login li a{
+	text-decoration:none;
+	color:white; 
+}
+#login:hover {
+	
+    transition:  0.3s;
+	background-color:#3CB371;
+	
+}
+.shop{
+	margin-top:32px;
+	color:white; 
+	width:100%; 
+	background:#003399;
+	border-radius:15px; 
+	padding :7px;	
+}
+.shop i{
+    font-size:20px;
+	float:left;
+	margin-right:10px;
+	color:white;
+}
+.shop li{
+	font-size:15px;
+	font-family:Oswalt;	
+	list-style: none;
+	cursor:pointer;
+}
+.shop li a {
+	
+	text-decoration:none;
+	color:white; 
+}
+.shop:hover {
+	
+    transition:  0.3s;
+	background-color:#3CB371;
+	
+}
+footer .row {
+	display:flex;
+	flex-wrap:wrap;
+	margin-top:40px; 
+	padding:30px 0px; 
+	
+}
+.footer ul{
+	list-style: none;
+}
+.footer {
+	background-color:#d6d1d1;
+	margin-top: 50px;
+	
+	
+}
+.footer col {
+	width:25%;
+	padding: 0 15px;	
+}
+.footer h4{
+	color:black;
+	font-size:18px;
+    text-transform:capitalize;
+	margin-bottom:30px;
+	position:relative;
+	margin-left:50px;
+	
+	
+}
+.footer ul li a{
+	font-size:15px;
+	text-transform: capitalize;
+	color:black;
+	text-decoration:none;
+	display:block;
+	transition: all 0.3s ease;
+	margin-left:20px;	
+}
+.footer ul li a:hover{
+	color:blue;
+    padding-left: 8px;	
+
+}
+.links a {
+	display:inline-block;
+	height:40px;
+	width:40px;
+	background-color:grey;
+	margin: 0 10px 10px 0 ;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	color:#ffffff;
+	transition: all 0.5s ease;
+	margin-left:34px;
+	
+}
+.links a:hover {
+     color:#24262b;
+	 background-color:#56aaff;
+
+}
+#about-us h5{
+	color: grey;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	background: #ABCBE9;
+	margin: 20px;
+	width: 15%;
+	margin-left: 43%;
+	border-radius:20px;
+   
+}
+#about-us img {
+	width: 100%;
+	height: 500px;
+	
+}
+#about-us p {
+	margin: 15px;
+	font-weight: bold;
+	
+	
+}

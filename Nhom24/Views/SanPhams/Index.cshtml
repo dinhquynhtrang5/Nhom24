@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Nhom24.Models.SanPham>
+
+@{
+    ViewData["Title"] = "QUẢN LÝ SẢN PHẨM";
+}
+
+<h1>QUẢN LÝ SẢN PHẨM</h1>
+
+<p>
+    <a class="btn btn-warning" asp-action="Create">Create New</a>
+    <a class="btn btn-success" asp-action="Upload">Upload Excel</a>
+</p>
+<table class="table table-bordered table-danger">
+    <thead>
+        <tr class="table-success text-center">
+            <th>
+                ID
+            </th>
+            <th>
+                Tên Sản Phẩm
+            </th>
+            <th>
+                Ảnh
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Mô Tả
+            </th>
+            <th>
+                Ngành Hàng
+            </th>
+            <th>
+                Tuỳ Chọn
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model ) {
+        <tr class="align-middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.SanPhamID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SanPhamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnhSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongSanPham)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.MoTaSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NganhHang.NganhHangID)
+            </td>
+                <td class="text-center" style=" width: 250px !important;">
+                    <a asp-action="Edit" asp-route-id="@item.SanPhamID" class="btn btn-info">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.SanPhamID" class="btn btn-warning">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.SanPhamID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

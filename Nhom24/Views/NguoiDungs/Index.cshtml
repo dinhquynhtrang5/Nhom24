@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Nhom24.Models.NguoiDung>
+
+@{
+    ViewData["Title"] = "NGUOI DUNG";
+}
+
+<h1>QUẢN LÝ NGƯỜI DÙNG</h1>
+
+<p>
+    <a class="btn btn-warning" asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered table-danger"
+    <thead>
+        <tr class="table-success text-center">
+            <th>
+                ID Người Dùng
+            </th>
+            <th>
+                Tên Người Dùng
+            </th>
+            <th>
+                Email Người Dùng
+            </th>
+            <th>
+                SĐT Người Dùng
+            </th>
+            <th>
+                Tuỳ Chọn
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="align-middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiDungName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NguoiDungName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailNguoiDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDTNguoiDung)
+            </td>
+            <td "text-center">
+                    <a asp-action="Edit" asp-route-id="@item.NguoiDungID" class="btn btn-info">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.NguoiDungID" class="btn btn-warning">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.NguoiDungID" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
