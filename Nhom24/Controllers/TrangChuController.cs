@@ -15,7 +15,7 @@ namespace Nhom24.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var nhom24Context = _context.SanPham.Include(s => s.NganhHang).ToList();
+            var nhom24Context = _context.SanPham.OrderByDescending(m => m.SanPhamID).ToList();
             ViewBag.Message = nhom24Context;
             return View();
         }

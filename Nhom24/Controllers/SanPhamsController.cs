@@ -22,10 +22,19 @@ namespace Nhom24.Controllers
         }
 
         // GET: SanPhams
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var nhom24Context = _context.SanPham.Include(s => s.NganhHang);
-            return View(await nhom24Context.ToListAsync());
+            if(_context.SanPham == null)
+            {
+                return Problem("Entity set 'MvcMovieContext.SanPham'  is null.");
+            }
+            var SanPhams = from m in _context.SanPham
+                         select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                SanPhams = SanPhams.Where(s => s.SanPhamName!.Contains(searchString));
+            }
+            return View(await SanPhams.ToListAsync());
         }
 
         // GET: SanPhams/Details/5

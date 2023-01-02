@@ -9,6 +9,12 @@
 <p>
     <a class="btn btn-warning" asp-action="Create">Create New</a>
     <a class="btn btn-success" asp-action="Upload">Upload Excel</a>
+    <form asp-controller="SanPhams" asp-action="Index">
+        <p class="input-group mb-3">
+            <input class="form-control" type="text" name="SearchString" />
+            <input type="submit" value="Filter" class="btn btn-info" />
+        </p>
+    </form>
 </p>
 <table class="table table-bordered table-danger">
     <thead>
